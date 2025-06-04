@@ -1,10 +1,19 @@
 import os
 import sys
 
-# Configuração para Streamlit Cloud
-if 'streamlit' in sys.modules:
-    os.environ["ALLOW_RESET"] = "TRUE"
-    os.environ["CHROMA_SERVER_HOST"] = "localhost"
+# Configuração específica para Streamlit Cloud
+os.environ["ALLOW_RESET"] = "TRUE"
+os.environ["CHROMA_SERVER_HOST"] = "localhost"
+os.environ["CHROMA_SERVER_PORT"] = "8000"
+
+# Disable telemetry
+os.environ["ANONYMIZED_TELEMETRY"] = "FALSE"
+
+try:
+    from crewai import Agent, Crew, Process, Task
+except Exception as e:
+    print(f"Erro ao importar CrewAI: {e}")
+    # Fallback ou mensagem de erro
 
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
