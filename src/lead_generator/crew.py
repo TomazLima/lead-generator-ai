@@ -1,3 +1,11 @@
+import os
+import sys
+
+# Configuração para Streamlit Cloud
+if 'streamlit' in sys.modules:
+    os.environ["ALLOW_RESET"] = "TRUE"
+    os.environ["CHROMA_SERVER_HOST"] = "localhost"
+
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
