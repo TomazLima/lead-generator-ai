@@ -1,6 +1,6 @@
-import sys
-import pysqlite3
-sys.modules["sqlite3"] = pysqlite3
+# import sys
+# import pysqlite3
+# sys.modules["sqlite3"] = pysqlite3
 
 import streamlit as st
 import os
@@ -102,6 +102,113 @@ with center_col:
         
         st.subheader("📊 Data-Driven Insights")
         st.write("Make informed decisions based on comprehensive research")
+
+    # Seção: Visualização dos Agentes
+    st.markdown("---")
+    st.markdown("<h2 style='text-align: center;'>🤖 Nossos Agentes de IA</h2>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #666;'>Veja como nossa equipe de IA trabalha em sequência para gerar leads de qualidade</p>", unsafe_allow_html=True)
+
+    # Criar 4 colunas para os agentes
+    agent_col1, agent_col2, agent_col3, agent_col4 = st.columns(4)
+
+    # Agente 1: Lead Generator
+    with agent_col1:
+        st.markdown(
+            """
+            <div style='text-align: center; padding: 20px; border: 2px solid #4F46E5; border-radius: 10px; margin: 10px 0;'>
+                <div style='font-size: 3em; margin-bottom: 10px;'>🔍</div>
+                <h4 style='color: #4F46E5; margin: 10px 0;'>Lead Generator</h4>
+                <p style='font-size: 12px; color: #666;'><strong>Especialista em Geração de Leads</strong></p>
+                <p style='font-size: 11px;'>🎯 Identifica empresas potenciais<br>
+                🌐 Verifica informações online<br>
+                📊 Busca exatamente 5 empresas</p>
+                <div style='background: #4F46E5; color: white; padding: 5px; border-radius: 5px; margin-top: 10px;'>
+                    <strong>PASSO 1</strong>
+                </div>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+
+    # Agente 2: Contact Agent
+    with agent_col2:
+        st.markdown(
+            """
+            <div style='text-align: center; padding: 20px; border: 2px solid #059669; border-radius: 10px; margin: 10px 0;'>
+                <div style='font-size: 3em; margin-bottom: 10px;'>👥</div>
+                <h4 style='color: #059669; margin: 10px 0;'>Contact Agent</h4>
+                <p style='font-size: 12px; color: #666;'><strong>Especialista em Pesquisa de Contatos</strong></p>
+                <p style='font-size: 11px;'>🔗 Encontra perfis LinkedIn<br>
+                📧 Descobre contatos verificados<br>
+                👔 Foca em tomadores de decisão</p>
+                <div style='background: #059669; color: white; padding: 5px; border-radius: 5px; margin-top: 10px;'>
+                    <strong>PASSO 2</strong>
+                </div>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+
+    # Agente 3: Lead Qualifier
+    with agent_col3:
+        st.markdown(
+            """
+            <div style='text-align: center; padding: 20px; border: 2px solid #DC2626; border-radius: 10px; margin: 10px 0;'>
+                <div style='font-size: 3em; margin-bottom: 10px;'>⚖️</div>
+                <h4 style='color: #DC2626; margin: 10px 0;'>Lead Qualifier</h4>
+                <p style='font-size: 12px; color: #666;'><strong>Especialista em Qualificação</strong></p>
+                <p style='font-size: 11px;'>📈 Avalia potencial de negócio<br>
+                🎯 Calcula score de 1-10<br>
+                ✅ Valida informações coletadas</p>
+                <div style='background: #DC2626; color: white; padding: 5px; border-radius: 5px; margin-top: 10px;'>
+                    <strong>PASSO 3</strong>
+                </div>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+
+    # Agente 4: Sales Manager
+    with agent_col4:
+        st.markdown(
+            """
+            <div style='text-align: center; padding: 20px; border: 2px solid #7C2D12; border-radius: 10px; margin: 10px 0;'>
+                <div style='font-size: 3em; margin-bottom: 10px;'>💼</div>
+                <h4 style='color: #7C2D12; margin: 10px 0;'>Sales Manager</h4>
+                <p style='font-size: 12px; color: #666;'><strong>Gerente de Vendas</strong></p>
+                <p style='font-size: 11px;'>📋 Revisa leads finais<br>
+                🥇 Prioriza por score<br>
+                📝 Dá recomendações de abordagem</p>
+                <div style='background: #7C2D12; color: white; padding: 5px; border-radius: 5px; margin-top: 10px;'>
+                    <strong>PASSO 4</strong>
+                </div>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+
+    # Linha do fluxo com setas
+    st.markdown(
+        """
+        <div style='text-align: center; margin: 30px 0;'>
+            <div style='display: flex; justify-content: center; align-items: center; font-size: 1.5em;'>
+                <span style='color: #4F46E5;'>🔍 Busca</span>
+                <span style='margin: 0 20px;'>➡️</span>
+                <span style='color: #059669;'>👥 Contatos</span>
+                <span style='margin: 0 20px;'>➡️</span>
+                <span style='color: #DC2626;'>⚖️ Qualifica</span>
+                <span style='margin: 0 20px;'>➡️</span>
+                <span style='color: #7C2D12;'>💼 Prioriza</span>
+            </div>
+            <p style='margin-top: 15px; color: #666; font-style: italic;'>
+                Processo sequencial automatizado - cada agente trabalha com os dados do anterior
+            </p>
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    st.markdown("---")
 
 # Results area (initially hidden)
 results_container = st.container()
