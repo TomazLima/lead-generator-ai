@@ -1,6 +1,16 @@
 # import sys
 # import pysqlite3
 # sys.modules["sqlite3"] = pysqlite3
+import sys
+try:
+    import pysqlite3
+    sys.modules['sqlite3'] = pysqlite3
+    print("✅ pysqlite3 configurado com sucesso")
+except ImportError:
+    print("❌ pysqlite3 não encontrado")
+    pass
+
+# Aqui começam seus imports normais...
 
 import streamlit as st
 import os
