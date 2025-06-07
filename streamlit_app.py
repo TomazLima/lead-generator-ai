@@ -253,7 +253,7 @@ st.markdown(
 )
 
 st.markdown("---")
-        """
+        
         <div style='text-align: center; margin: 30px 0;'>
             <div style='display: flex; justify-content: center; align-items: center; font-size: 1.5em;'>
                 <span style='color: #4F46E5;'>🔍 Busca</span>
