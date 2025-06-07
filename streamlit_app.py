@@ -163,6 +163,29 @@ st.markdown("<h2 style='text-align: center;'>🤖 Nossos Agentes de IA</h2>", un
 st.markdown("<p style='text-align: center; color: #666;'>Veja como nossa equipe de IA trabalha em sequência para gerar leads de qualidade</p>", unsafe_allow_html=True)
 
 # Criar 4 colunas para os agentes
+# CSS para equalizar altura dos cards
+st.markdown("""
+<style>
+    /* Altura igual para todos os cards dos agentes */
+    div[data-testid="column"] {
+        height: 450px !important;
+    }
+    
+    div[data-testid="column"] > div {
+        height: 100% !important;
+    }
+    
+    /* Forçar altura mínima nos cards */
+    .agent-card {
+        min-height: 400px !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 agent_col1, agent_col2, agent_col3, agent_col4 = st.columns(4)
 
 # Agente 1: Lead Generator
