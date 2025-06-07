@@ -252,27 +252,28 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown("---")
-        
-        <div style='text-align: center; margin: 30px 0;'>
-            <div style='display: flex; justify-content: center; align-items: center; font-size: 1.5em;'>
-                <span style='color: #4F46E5;'>🔍 Busca</span>
-                <span style='margin: 0 20px;'>➡️</span>
-                <span style='color: #059669;'>👥 Contatos</span>
-                <span style='margin: 0 20px;'>➡️</span>
-                <span style='color: #DC2626;'>⚖️ Qualifica</span>
-                <span style='margin: 0 20px;'>➡️</span>
-                <span style='color: #7C2D12;'>💼 Prioriza</span>
-            </div>
-            <p style='margin-top: 15px; color: #666; font-style: italic;'>
-                Processo sequencial automatizado - cada agente trabalha com os dados do anterior
-            </p>
+# Linha do fluxo com setas
+st.markdown(
+    """
+    <div style='text-align: center; margin: 30px 0;'>
+        <div style='display: flex; justify-content: center; align-items: center; font-size: 1.5em;'>
+            <span style='color: #4F46E5;'>🔍 Busca</span>
+            <span style='margin: 0 20px;'>➡️</span>
+            <span style='color: #059669;'>👥 Contatos</span>
+            <span style='margin: 0 20px;'>➡️</span>
+            <span style='color: #DC2626;'>⚖️ Qualifica</span>
+            <span style='margin: 0 20px;'>➡️</span>
+            <span style='color: #7C2D12;'>💼 Prioriza</span>
         </div>
-        """, 
-        unsafe_allow_html=True
-    )
+        <p style='margin-top: 15px; color: #666; font-style: italic;'>
+            Processo sequencial automatizado - cada agente trabalha com os dados do anterior
+        </p>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
-    st.markdown("---")
+st.markdown("---")
 
 # Results area (initially hidden)
 results_container = st.container()
